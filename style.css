@@ -1,0 +1,272 @@
+/* style.css - Tema Escuro para SportAguiar */
+
+/* Reset e Configurações Gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #0481ff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #0481ff, #00ffcc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #b0b0b0;
+}
+
+/* Lista de Produtos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.product {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2a2a2a;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    border-color: #0481ff;
+}
+
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+}
+
+.product h3 {
+    margin: 15px 0 10px;
+    color: #0481ff;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.product p {
+    color: #a0a0a0;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.price {
+    font-weight: bold;
+    color: #00ffcc;
+    font-size: 1.4em;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* Formulário de Pedido */
+.order-form {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid #2a2a2a;
+}
+
+.order-form h2 {
+    margin-top: 0;
+    color: #0481ff;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #d0d0d0;
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0481ff;
+    box-shadow: 0 0 0 2px rgba(4, 129, 255, 0.2);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Botões */
+button {
+    background: linear-gradient(135deg, #0481ff, #0066cc);
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0066cc, #0481ff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Mensagem de Sucesso */
+.success-message {
+    display: none;
+    background-color: rgba(0, 200, 83, 0.15);
+    color: #00c853;
+    padding: 18px;
+    border-radius: 8px;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 1.1em;
+    border: 1px solid rgba(0, 200, 83, 0.3);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botão de Instalação PWA */
+#installButton {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #0481ff, #00bcd4);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+#installButton:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2.2em;
+    }
+    
+    .order-form {
+        padding: 20px;
+    }
+}
+
+/* Efeitos Especiais */
+.product {
+    position: relative;
+    overflow: hidden;
+}
+
+.product::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(4, 129, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product:hover::after {
+    opacity: 1;
+}
