@@ -1,0 +1,21 @@
+{
+  "name": "SportAguiar",
+  "short_name": "SportAguiar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#0356fa",
+  "description": "As melhores camisas e tênis esportivos",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192.png?text=SA",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512.png?text=SA",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
